@@ -1,0 +1,32 @@
+import type { SectionSpec } from './pick-fields.ts';
+
+export const CAMERA_SECTION: SectionSpec = {
+  id: 'camera',
+  title: 'Camera',
+  fields: [
+    { label: 'Make', tags: ['Make'] },
+    { label: 'Model', tags: ['Model', 'CanonModelID'] },
+    { label: 'Firmware', tags: ['FirmwareVersion', 'CanonFirmwareVersion'] },
+    { label: 'Software', tags: ['Software'] },
+    { label: 'Lens', tags: ['LensID', 'LensModel', 'Lens', 'LensType'] },
+    { label: 'Lens make', tags: ['LensMake'] },
+    { label: 'Lens range', tags: ['LensInfo'] },
+    { label: 'Focal length', tags: ['Composite:FocalLength35efl', 'FocalLength'] },
+    { label: 'Aperture', tags: ['FNumber', 'Aperture'], format: (value) => `f/${value}` },
+    { label: 'Shutter', tags: ['ExposureTime', 'ShutterSpeed'], format: (value) => `${value} s` },
+    { label: 'ISO', tags: ['ISO'] },
+    { label: 'Exposure', tags: ['ExposureProgram', 'ExposureMode'] },
+    { label: 'Exp. comp.', tags: ['ExposureCompensation'] },
+    { label: 'Metering', tags: ['MeteringMode'] },
+    { label: 'Flash', tags: ['Flash'] },
+    { label: 'White bal.', tags: ['WhiteBalance'] },
+    { label: 'Scene', tags: ['SceneCaptureType', 'SceneType'] },
+    { label: 'Digital zoom', tags: ['DigitalZoomRatio'] },
+    { label: 'Subject dist.', tags: ['SubjectDistance', 'FocusDistance'] },
+    { label: 'Field of view', tags: ['FOV'] },
+    { label: 'Light value', tags: ['LightValue'] },
+    { label: 'Orientation', tags: ['Orientation'] },
+    { label: 'Shutter count', tags: ['ShutterCount', 'ImageCount', 'FileIndex'] },
+    { label: 'Temperature', tags: ['CameraTemperature', 'AmbientTemperature'] },
+  ],
+};

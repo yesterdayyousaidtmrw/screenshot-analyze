@@ -1,0 +1,30 @@
+{
+  "name": "screenshot-analyze",
+  "version": "0.1.0",
+  "description": "CLI that analyzes the metadata of a screenshot or uploaded file",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "shot-analyze": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "bplist-parser": "^0.5.0",
+    "exiftool-vendored": "^39.2.0",
+    "file-type": "^22.3.0",
+    "mediainfo.js": "^0.3.8",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2"
+  }
+}
